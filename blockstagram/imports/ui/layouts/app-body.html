@@ -1,0 +1,23 @@
+<template name="App_body">
+  <div id="header"></div>
+  <div id="container">
+    <section id="tags">
+      <h3>Tags</h3>
+
+      {{#each tag in tags}}
+        <a title="tag.name" class="tag">
+          {{tag.name}}
+        </a>
+      {{/each}}
+    </section>
+    <div id="content">
+      {{#momentum plugin="fade"}}
+        {{#if Template.subscriptionsReady}}
+          {{> Template.dynamic template=main}}
+        {{else}}
+          {{> App_loading}}
+        {{/if}}
+      {{/momentum}}
+    </div>
+  </div>
+</template>

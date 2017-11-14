@@ -23,3 +23,6 @@ ethereum:web3
 less
 ethereum:dapp-styles
 ethereum:accounts
+kadira:flow-router
+kadira:blaze-layout
+percolate:momentum
